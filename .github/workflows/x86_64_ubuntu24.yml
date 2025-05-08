@@ -1,0 +1,30 @@
+name: x86_64-ubuntu24
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Conan
+        uses: conan-io/setup-conan@v1
+
+      - name: Install Conan Dependencies
+        run: conan install .  -of build/Release --build=missing
+
+      - name: Configure Build
+        run: cmake -S . -B build/Release -DCMAKE_TOOLCHAIN_FILE=build/Release/conan_toolchain.cmake
+
+      - name: Build
+        run: cmake --build build/Release --config Release -- -j
+
+      - name: Unit-Test C++
+        run: build/Release/bin/pacman-test
