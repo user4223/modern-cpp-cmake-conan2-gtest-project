@@ -16,7 +16,8 @@
       "label": "build debug",
       "type": "shell",
       "args": [
-        "Debug"
+        "Debug",
+        "-- -j"
       ],
       "command": "${workspaceFolder}/build.sh",
       "problemMatcher": [
