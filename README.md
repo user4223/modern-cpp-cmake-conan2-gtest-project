@@ -1,4 +1,4 @@
-[![x86_64-ubuntu24](https://github.com/user4223/pacman/actions/workflows/x86_64_ubuntu24.yml/badge.svg)](https://github.com/user4223/pacman/actions/workflows/x86_64_ubuntu24.yml)
+[![x86_64-ubuntu24](https://github.com/user4223/modern-cpp-cmake-conan2-gtest-project/actions/workflows/x86_64_ubuntu24.yml/badge.svg)](https://github.com/user4223/modern-cpp-cmake-conan2-gtest-project/actions/workflows/x86_64_ubuntu24.yml)
 
 # What's this for?
 Minimal project template using cpp, cmake, conan and gtest.
